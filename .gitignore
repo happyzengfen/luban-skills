@@ -1,0 +1,46 @@
+.DS_Store
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cert
+*.der
+*.csr
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+credentials.json
+service-account*.json
+*-service-account.json
+secrets.*
+*.secret
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Runtime outputs
+runs/
+luban-skills/runs/
+outputs/
+tmp/
+checkpoints/
+*.log
+
+# Editor and local files
+.vscode/
+.idea/
+*.bak
+*.bak*

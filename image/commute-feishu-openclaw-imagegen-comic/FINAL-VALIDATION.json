@@ -1,0 +1,74 @@
+{
+  "task_label": "commute-feishu-openclaw-imagegen-comic-20260425",
+  "delivery_tier": "正式版",
+  "formal_completion": true,
+  "method": "luban-skills -> ACP Hermes -> Hermes image direct export -> per-frame PNG落盘",
+  "output_dir": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic",
+  "frames_expected": 6,
+  "frames_succeeded": 6,
+  "frames": [
+    {
+      "frame": "frame-01",
+      "file": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/frame-01.png",
+      "bytes": 2306541,
+      "size": [
+        1024,
+        1536
+      ],
+      "valid_png": true
+    },
+    {
+      "frame": "frame-02",
+      "file": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/frame-02.png",
+      "bytes": 2251306,
+      "size": [
+        1024,
+        1536
+      ],
+      "valid_png": true
+    },
+    {
+      "frame": "frame-03",
+      "file": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/frame-03.png",
+      "bytes": 2336362,
+      "size": [
+        1024,
+        1536
+      ],
+      "valid_png": true
+    },
+    {
+      "frame": "frame-04",
+      "file": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/frame-04.png",
+      "bytes": 2629563,
+      "size": [
+        1024,
+        1536
+      ],
+      "valid_png": true
+    },
+    {
+      "frame": "frame-05",
+      "file": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/frame-05.png",
+      "bytes": 2535853,
+      "size": [
+        1024,
+        1536
+      ],
+      "valid_png": true
+    },
+    {
+      "frame": "frame-06",
+      "file": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/frame-06.png",
+      "bytes": 2244135,
+      "size": [
+        1024,
+        1536
+      ],
+      "valid_png": true
+    }
+  ],
+  "contact_sheet": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/contact-sheet.png",
+  "storyboard": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/storyboard.md",
+  "render_results": "<workspace>/outputs/commute-feishu-openclaw-imagegen-comic/render-results.json"
+}

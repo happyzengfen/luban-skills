@@ -1,0 +1,27 @@
+# 示例任务卡 — 给 build_prompt.sh / dispatch_acp.sh 使用
+# 这是"最小只读验证"任务卡；diting-skills 仅作为可选协作 skill 示例
+
+task_label: luban-min-verify
+task_type: 执行辅助
+goal: 验证 luban ACP 最小只读链路通畅，输出 pwd + 完成标识两行
+workdir: <workspace>
+readable_dirs:
+  - <workspace>/skills/diting-skills
+  - <workspace>/skills/luban-skills
+writable_dirs: []
+input_materials: []
+constraints:
+  - 不联网
+  - 不写文件
+  - 只执行一次安全只读命令 pwd
+  - 输出严格两行，不要解释
+risks:
+  - 被旧 workspace 的 TASKS.json / FRAMEWORK.md 牵引跑偏
+  - workdir 漂移到临时 worktree 目录
+first_action: 在固定工作目录执行 pwd
+acceptance:
+  - 第一行以 CURRENT_DIR= 开头
+  - 第二行恰好是 LUBAN_MIN_VERIFY_DONE
+  - 总共恰好两行，无多余输出
+time_budget_s: 300
+sentinel: true

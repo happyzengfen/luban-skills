@@ -1,0 +1,34 @@
+# luban-skills 默认工具调用白名单
+# guard.py 优先用 $GUARD_RULES_PATH，其次用本文件，最后才用内置 default。
+#
+# 匹配规则：
+#   - block 任一命中 → 拒绝（不再看 allow）
+#   - allow 任一命中 → 放行
+#   - 都没命中 → 拒绝（默认拒绝）
+
+allow:
+  - "^pwd$"
+  - "^ls(\\s+-[alhRtS1]+)?(\\s+[/\\w.\\-]*)?$"
+  - "^cat\\s+[/\\w.\\-]+$"
+  - "^head(\\s+-n\\s+\\d+)?\\s+[/\\w.\\-]+$"
+  - "^tail(\\s+-n\\s+\\d+)?\\s+[/\\w.\\-]+$"
+  - "^wc(\\s+-[lwc]+)?\\s+[/\\w.\\-]+$"
+  - "^grep(\\s+-[inHr]+)?\\s+.{1,200}$"
+  - "^find\\s+[/\\w.\\-]+.{0,200}$"
+  - "^echo\\s+.{0,200}$"
+  - "^date(\\s+.{0,50})?$"
+  - "^python3\\s+-c\\s+.{1,400}$"
+  - "^git\\s+(status|log|diff|show|branch|rev-parse)\\b.*$"
+
+block:
+  - "\\brm\\s+-rf?\\b"
+  - "\\bmkfs\\b"
+  - "\\bdd\\s+if="
+  - "\\bchmod\\b"
+  - "\\bchown\\b"
+  - "\\bsudo\\b"
+  - "\\bcurl\\s+[^|]*\\|\\s*sh"
+  - "\\bwget\\s+[^|]*\\|\\s*sh"
+  - "\\bgit\\s+push\\s+.*--force"
+  - "\\bgit\\s+reset\\s+--hard"
+  - ":\\s*\\(\\s*\\)\\s*\\{.*\\}\\s*;"
